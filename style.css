@@ -145,27 +145,19 @@ button:hover {
   outline: none;
 }
 
-/* Style for the dropdown options */
 .dropdown select {
   outline: none;
   width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  /* Styling the background, border, and text color of the select */
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 8px;
   font-size: 16px;
 }
-/* option:nth-child(1):hover option:nth-child(1) {
-  color: red;
-  background: #000;
-} */
-
-.statusText {
-  position: relative;
-  top: -10px;
-  left: 70px;
+.dropdown select option {
+  color: #000;
+  background-color: #7a5cfa;
 }
