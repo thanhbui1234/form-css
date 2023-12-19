@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form method="get" id="form">
+    <form method="get" action="#" id="form">
       <div>
         <label for="">Username</label>
         <input id="name" placeholder="Enter username" type="text" />
+        <label class="invalid" id="errName" for=""></label>
       </div>
       <div>
         <label for="">Password</label>
         <input id="password" placeholder="Enter password" type="text" />
+        <label class="invalid" id="errPassword" for=""></label>
       </div>
       <div>
         <input id="remember" type="checkbox" />

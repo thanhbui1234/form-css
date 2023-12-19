@@ -29,6 +29,10 @@ input[type="text"]:focus {
   border-color: #7a5cfa;
   outline: none;
 }
+.invalid {
+  border-color: red !important;
+  color: red;
+}
 
 input[type="checkbox"] {
   padding: 30px;
