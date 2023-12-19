@@ -15,7 +15,7 @@ formm.addEventListener("submit", function (event) {
 
   if (username.value.length < 5) {
     username.classList.add("invalid");
-    errName.innerHTML = "INVALID NAME";
+    errName.innerHTML = "Error message informing me of a problem";
     event.preventDefault();
   } else {
     username.classList.remove("invalid name");
@@ -24,7 +24,7 @@ formm.addEventListener("submit", function (event) {
 
   if (password.value.length < 5) {
     password.classList.add("invalid");
-    errPassword.innerHTML = "INVALID PASSWORD";
+    errPassword.innerHTML = "Your password is between 4 and 12 characters";
     event.preventDefault();
   } else {
     password.classList.remove("invalid");

@@ -10,15 +10,15 @@
   <body>
     <div class="container">
       <form method="get" action="#" id="form">
-        <div>
+        <div class="control">
           <label for="">Username</label>
           <input id="name" placeholder="Enter username" type="text" />
-          <label style="color: red" class="" id="errName" for=""></label>
+          <span class="" id="errName" for=""></span>
         </div>
-        <div>
+        <div class="control">
           <label for="">Password</label>
           <input id="password" placeholder="Enter password" type="text" />
-          <label style="color: red" class="" id="errPassword" for=""></label>
+          <span class="" id="errPassword" for=""></span>
         </div>
         <div>
           <input id="remember" type="checkbox" />
@@ -54,18 +54,20 @@
           />
           <label for="javascript">Radio section 3</label>
         </div>
-
         <div class="dropdown">
-          <select class="ddselect">
-            <option id="drop1" value="zero" selected>Dropdown option</option>
-            <option value="option1">Dropdown option 1</option>
-            <option value="option2">Dropdown option 2</option>
-          </select>
+          <span class="dropbtn">Dropdown option</span>
+          <div class="dropdown-content">
+            <a href="#">Dropdown 1</a>
+            <a href="#">Dropdown 2</a>
+            <a href="#">Dropdown 3</a>
+          </div>
         </div>
         <div class="BTN">
           <button id="cancel" type="button">Cancel</button>
           <button type="submit">Next</button>
         </div>
+
+        <!--  -->
       </form>
     </div>
 
