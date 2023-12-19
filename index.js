@@ -31,3 +31,18 @@ formm.addEventListener("submit", function (event) {
     errPassword.innerHTML = "";
   }
 });
+
+const cancle = document
+  .querySelector("#cancel")
+  .addEventListener("click", (e) => {
+    console.log("hi");
+    const username = document.querySelector("#name");
+    const password = document.querySelector("#password");
+    const errName = document.querySelector("#errName");
+    const errPassword = document.querySelector("#errPassword");
+    const statusInput = document.querySelector("#status");
+    username.classList.remove("invalid");
+    errName.innerHTML = "";
+    password.classList.remove("invalid");
+    errPassword.innerHTML = "";
+  });

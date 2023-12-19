@@ -5,13 +5,24 @@
   font-size: 100%;
   font-family: sans-serif;
 }
-
+body {
+  background-color: #f0d9ff;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 420px;
+  background: #fff;
+}
 #form {
-  margin: 150px auto 0;
-  max-width: 400px;
+  margin: 10px auto;
+  width: 564px;
+  height: 1040px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
+  padding: 60px 98px;
 }
 *input {
   border: 1px solid #f1efef;
@@ -20,7 +31,7 @@ input[type="text"] {
   margin-top: 10px;
   border: 2px solid #f1efef;
   padding: 10px;
-  border-radius: 5%;
+  border-radius: 10px;
   width: 100%;
   color: gray;
 }
@@ -30,6 +41,9 @@ input[type="text"]:focus {
   outline: none;
 }
 .invalid {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-color: red !important;
   color: red;
 }
@@ -126,7 +140,8 @@ button:hover {
   color: #fff;
 }
 .dropdown {
-  width: 100%;
+  /* width: 100%; */
+  max-height: 150px;
   outline: none;
 }
 
@@ -148,10 +163,6 @@ button:hover {
   color: red;
   background: #000;
 } */
-
-.dropdown:hover {
-  border: #7a5cfa 2px solid;
-}
 
 .statusText {
   position: relative;

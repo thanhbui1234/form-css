@@ -8,64 +8,67 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form method="get" action="#" id="form">
-      <div>
-        <label for="">Username</label>
-        <input id="name" placeholder="Enter username" type="text" />
-        <label class="invalid" id="errName" for=""></label>
-      </div>
-      <div>
-        <label for="">Password</label>
-        <input id="password" placeholder="Enter password" type="text" />
-        <label class="invalid" id="errPassword" for=""></label>
-      </div>
-      <div>
-        <input id="remember" type="checkbox" />
-        <label for="remember">Remember me</label>
-      </div>
+    <div class="container">
+      <form method="get" action="#" id="form">
+        <div>
+          <label for="">Username</label>
+          <input id="name" placeholder="Enter username" type="text" />
+          <label style="color: red" class="" id="errName" for=""></label>
+        </div>
+        <div>
+          <label for="">Password</label>
+          <input id="password" placeholder="Enter password" type="text" />
+          <label style="color: red" class="" id="errPassword" for=""></label>
+        </div>
+        <div>
+          <input id="remember" type="checkbox" />
+          <label for="remember">Remember me</label>
+        </div>
 
-      <label class="switch">
-        <input id="status" type="checkbox" />
-        <span class="slider round"></span>
-        <p class="statusText"></p>
-      </label>
+        <label class="switch">
+          <input id="status" type="checkbox" />
+          <span class="slider round"></span>
+          <p class="statusText"></p>
+        </label>
 
-      <div>
-        <input
-          type="radio"
-          checked
-          id="html"
-          name="fav_language"
-          value="HTML"
-        />
-        <label for="html">Radio section 1</label>
-      </div>
-      <div>
-        <input type="radio" id="css" name="fav_language" value="CSS" />
-        <label for="css">Radio section 2</label>
-      </div>
-      <div>
-        <input
-          type="radio"
-          id="javascript"
-          name="fav_language"
-          value="JavaScript"
-        />
-        <label for="javascript">Radio section 3</label>
-      </div>
+        <div>
+          <input
+            type="radio"
+            checked
+            id="html"
+            name="fav_language"
+            value="HTML"
+          />
+          <label for="html">Radio section 1</label>
+        </div>
+        <div>
+          <input type="radio" id="css" name="fav_language" value="CSS" />
+          <label for="css">Radio section 2</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="javascript"
+            name="fav_language"
+            value="JavaScript"
+          />
+          <label for="javascript">Radio section 3</label>
+        </div>
 
-      <div class="dropdown">
-        <select>
-          <option value="" selected>Dropdown option</option>
-          <option value="option1">Dropdown option 1</option>
-          <option value="option2">Dropdown option 2</option>
-        </select>
-      </div>
-      <div class="BTN">
-        <button type="button">Cancel</button>
-        <button type="submit">Next</button>
-      </div>
-    </form>
+        <div class="dropdown">
+          <select>
+            <option value="" selected>Dropdown option</option>
+            <option value="option1">Dropdown option 1</option>
+            <option value="option2">Dropdown option 2</option>
+          </select>
+        </div>
+        <div class="BTN">
+          <button id="cancel" type="button">Cancel</button>
+          <button type="submit">Next</button>
+        </div>
+      </form>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
