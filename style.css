@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+#form {
+  margin: 150px auto 0;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+*input {
+  border: 1px solid #f1efef;
+}
+input[type="text"] {
+  margin-top: 10px;
+  border: 2px solid #f1efef;
+  padding: 10px;
+  border-radius: 5%;
+  width: 100%;
+  color: gray;
+}
+input[type="text"]:hover,
+input[type="text"]:focus {
+  border-color: #7a5cfa;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  padding: 30px;
+  accent-color: #7a5cfa;
+  outline: none;
+}
+
+input[type="radio"] {
+  accent-color: #7a5cfa;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #7a5cfa;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #7a5cfa;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.status {
+  position: relative;
+  left: 80px;
+  top: -10px;
+}
+.BTN {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  background: #fff;
+  text-align: center;
+  border: 2px solid #7a5cfa;
+  color: #7a5cfa;
+  padding: 15px 43px;
+  border-radius: 5px;
+}
+button:active,
+button:hover {
+  background-color: #7a5cfa;
+  color: #fff;
+}
+.dropdown {
+  width: 100%;
+  outline: none;
+}
+
+/* Style for the dropdown options */
+.dropdown select {
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Styling the background, border, and text color of the select */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 16px;
+}
+/* option:nth-child(1):hover option:nth-child(1) {
+  color: red;
+  background: #000;
+} */
+
+.dropdown:hover {
+  border: #7a5cfa 2px solid;
+}
+
+.statusText {
+  position: relative;
+  top: -10px;
+  left: 70px;
+}

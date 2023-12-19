@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form method="get" id="form">
+      <div>
+        <label for="">Username</label>
+        <input id="name" placeholder="Enter username" type="text" />
+      </div>
+      <div>
+        <label for="">Password</label>
+        <input id="password" placeholder="Enter password" type="text" />
+      </div>
+      <div>
+        <input id="remember" type="checkbox" />
+        <label for="remember">Remember me</label>
+      </div>
+
+      <label class="switch">
+        <input id="status" type="checkbox" />
+        <span class="slider round"></span>
+        <p class="statusText"></p>
+      </label>
+
+      <div>
+        <input
+          type="radio"
+          checked
+          id="html"
+          name="fav_language"
+          value="HTML"
+        />
+        <label for="html">Radio section 1</label>
+      </div>
+      <div>
+        <input type="radio" id="css" name="fav_language" value="CSS" />
+        <label for="css">Radio section 2</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">Radio section 3</label>
+      </div>
+
+      <div class="dropdown">
+        <select>
+          <option value="" selected>Dropdown option</option>
+          <option value="option1">Dropdown option 1</option>
+          <option value="option2">Dropdown option 2</option>
+        </select>
+      </div>
+      <div class="BTN">
+        <button type="button">Cancel</button>
+        <button type="submit">Next</button>
+      </div>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
