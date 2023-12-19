@@ -116,7 +116,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-.status {
+.statusText {
   position: relative;
   left: 80px;
   top: -10px;
