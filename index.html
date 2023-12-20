@@ -103,38 +103,36 @@
         </div>
 
         <div class="dropdown">
-          <span class="dropbtn">Dropdown option </span>
+          <span class="dropbtn">
+            <span class="selected-value">Open this select menu</span>
+          </span>
           <div class="dropdown-content">
-            <div>
-              <input
-                style="width: 100%"
-                hidden
-                value="option1"
-                class="selectopt"
-                name="test"
-                type="radio"
-                id="opt1"
-              />
-              <label style="width: 100%" for="opt1" class="optionSelect"
-                >Option 1</label
-              >
-            </div>
-            <div>
-              <input
-                hidden
-                style="width: 100%"
-                value="option2"
-                class="selectopt"
-                name="test"
-                type="radio"
-                id="opt2"
-              />
-              <label style="width: 100%" for="opt2" class="optionSelect"
-                >Option 2</label
-              >
-            </div>
+            <ul class="select-dropdown" role="listbox" id="select-dropdown">
+              <li role="option">
+                <input
+                  type="radio"
+                  id="github"
+                  value="option 1"
+                  name="dropdownOption"
+                />
+                <label for="github"
+                  ><i class="bx bxl-github"></i>Option 1</label
+                >
+              </li>
+              <li role="option">
+                <input
+                  type="radio"
+                  id="instagram"
+                  value="option 2"
+                  name="dropdownOption"
+                />
+                <label for="instagram"
+                  ><i class="bx bxl-instagram"></i>Option 2</label
+                >
+              </li>
+            </ul>
           </div>
-          <!-- <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -153,9 +151,20 @@
                 <rect width="24" height="24" fill="white" />
               </clipPath>
             </defs>
-          </svg> -->
+          </svg>
         </div>
-        <div></div>
+        <div class="custom-select">
+          <button
+            class="select-button"
+            role="combobox"
+            aria-labelledby="select button"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="select-dropdown"
+          >
+            <span class="arrow"></span>
+          </button>
+        </div>
         <div class="BTN">
           <button id="cancel" type="button">Cancel</button>
           <button type="submit">Next</button>
