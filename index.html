@@ -12,7 +12,12 @@
       <form method="get" action="#" id="form">
         <div class="control">
           <label for="">Username</label>
-          <input id="name" placeholder="Enter username" type="text" />
+          <input
+            oninput="removeErrName()"
+            id="name"
+            placeholder="Enter username"
+            type="text"
+          />
           <span class="" id="errName" for=""></span>
           <span class="icon-err">
             <svg
@@ -38,7 +43,12 @@
         </div>
         <div class="control">
           <label for="">Password</label>
-          <input id="password" placeholder="Enter password" type="text" />
+          <input
+            id="password"
+            oninput="removeErrPassword()"
+            placeholder="Enter password"
+            type="text"
+          />
           <span class="" id="errPassword" for=""></span>
           <span class="icon-err-password">
             <svg
@@ -67,43 +77,64 @@
           <label for="remember">Remember me</label>
         </div>
 
-        <label class="switch">
+        <label onclick="getChecked()" class="switch">
           <input id="status" type="checkbox" />
           <span class="slider round"></span>
           <p class="statusText"></p>
         </label>
+        <div class="container-radio">
+          <div>
+            <input type="radio" id="html" name="radioName" value="radio1" />
+            <label for="html">Radio section 1</label>
+          </div>
+          <div>
+            <input type="radio" id="css" name="radioName" value="radio2" />
+            <label for="css">Radio section 2</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="javascript"
+              name="radioName"
+              value="radio3"
+            />
+            <label for="javascript">Radio section 3</label>
+          </div>
+        </div>
 
-        <div>
-          <input
-            type="radio"
-            checked
-            id="html"
-            name="fav_language"
-            value="HTML"
-          />
-          <label for="html">Radio section 1</label>
-        </div>
-        <div>
-          <input type="radio" id="css" name="fav_language" value="CSS" />
-          <label for="css">Radio section 2</label>
-        </div>
-        <div>
-          <input
-            type="radio"
-            id="javascript"
-            name="fav_language"
-            value="JavaScript"
-          />
-          <label for="javascript">Radio section 3</label>
-        </div>
         <div class="dropdown">
           <span class="dropbtn">Dropdown option </span>
           <div class="dropdown-content">
-            <a href="#">Dropdown 1</a>
-            <a href="#">Dropdown 2</a>
-            <a href="#">Dropdown 3</a>
+            <div>
+              <input
+                style="width: 100%"
+                hidden
+                value="option1"
+                class="selectopt"
+                name="test"
+                type="radio"
+                id="opt1"
+              />
+              <label style="width: 100%" for="opt1" class="optionSelect"
+                >Option 1</label
+              >
+            </div>
+            <div>
+              <input
+                hidden
+                style="width: 100%"
+                value="option2"
+                class="selectopt"
+                name="test"
+                type="radio"
+                id="opt2"
+              />
+              <label style="width: 100%" for="opt2" class="optionSelect"
+                >Option 2</label
+              >
+            </div>
           </div>
-          <svg
+          <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -122,8 +153,9 @@
                 <rect width="24" height="24" fill="white" />
               </clipPath>
             </defs>
-          </svg>
+          </svg> -->
         </div>
+        <div></div>
         <div class="BTN">
           <button id="cancel" type="button">Cancel</button>
           <button type="submit">Next</button>
