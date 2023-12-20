@@ -1,7 +1,6 @@
 (function () {
   const customSelect = document.querySelector(".custom-select");
   const selectBtn = document.querySelector(".select-button");
-
   const selectedValue = document.querySelector(".selected-value");
   const optionsList = document.querySelectorAll(".select-dropdown li");
 
@@ -38,20 +37,43 @@
 /////////////////////////////////////////////////////
 const dropbtn = document.querySelector(".dropdown");
 const iconSelect = document.querySelector(".icon-select");
+const dropdownContent = document.querySelector(".dropdown-content");
 dropbtn.addEventListener("click", () => {
-  const dropdownContent = document.querySelector(".dropdown-content");
   dropdownContent.classList.toggle("active");
   iconSelect.classList.toggle("icon-select-active");
 });
+function handleClick() {
+  console.log("hi");
+  dropdownContent.classList.remove("active-show");
+}
+const selectopt = document.querySelector("input[name=dropdownOption]");
+selectopt.addEventListener("click", () => {
+  dropdownContent.classList.remove("active");
+});
+////////////////
+const selectDown = document.querySelector("[role='listbox']");
+const optionsClick = document.querySelector('[role="option"]');
+
+const onRemoveSelectOption = () => {
+  dropdownContent.classList.add("active-show");
+};
+
 ////////////////
 const statusInput = document.querySelector("#status");
 const containerRadio = document.querySelector(".container-radio");
 const textStatus = document.querySelector(".statusText");
+textStatus.innerHTML = "OFF";
 const getChecked = () => {
+  const removeRadioChecked = document.querySelectorAll("input[name=radioName]");
   if (statusInput.checked) {
     containerRadio.classList.add("active-radio");
     textStatus.innerHTML = "ON";
   } else {
+    for (let i = 0; i < removeRadioChecked.length; i++) {
+      if (removeRadioChecked[i].checked) {
+        removeRadioChecked[i].checked = !removeRadioChecked[i].checked;
+      }
+    }
     containerRadio.classList.remove("active-radio");
     textStatus.innerHTML = "OFF";
   }
@@ -63,6 +85,7 @@ const errName = document.querySelector("#errName");
 const errPassword = document.querySelector("#errPassword");
 const iconErr = document.querySelector(".icon-err");
 const iconErrPw = document.querySelector(".icon-err-password");
+const radioName = document.querySelectorAll("input[type=radio]");
 
 const removeErrName = (e) => {
   username.classList.remove("invalid");
@@ -73,24 +96,29 @@ const removeErrPassword = (e) => {
   password.classList.remove("invalid");
   errPassword.innerHTML = "";
   iconErrPw.classList.remove("invalidIcon");
+
+  for (let i = 0; i < radioName.length; i++) {
+    if (radioName[i].checked) {
+      console.log(radioName[i]);
+      radioName[i].checked = !radioName[i].checked;
+    }
+  }
 };
 
 ////////////////////////////////////
 const formm = document.querySelector("form");
 
 formm.addEventListener("submit", (e) => {
-  const selectopt = document.querySelectorAll("input[name=dropdownOption]");
   let valueSelecOption;
+  const selectopt = document.querySelectorAll("input[name=dropdownOption]");
   for (let i = 0; i < selectopt.length; i++) {
     if (selectopt[i].checked) {
       valueSelecOption = selectopt[i].value;
     }
   }
-  console.log(valueSelecOption);
 
-  const radioName = document.querySelectorAll("input[type=radio]");
+  const radioName = document.querySelectorAll("input[name=radioName]");
   let valueInputName;
-  let valueInputSelected;
   for (let i = 0; i < radioName.length; i++) {
     if (radioName[i].checked) {
       valueInputName = radioName[i].value;

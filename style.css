@@ -269,6 +269,9 @@ input:checked + .slider:before {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+.active-drop-content {
+  display: none;
+}
 
 .dropdown-content p {
   color: black;
@@ -284,13 +287,15 @@ input:checked + .slider:before {
   font-weight: 400;
   line-height: 50px; /* 150% */
 }
-
 .dropdown-content p:hover {
   color: white;
   background-color: #7a5cfa;
 }
 .active {
   display: block;
+}
+.active-show {
+  display: none;
 }
 .icon-select {
   transition: all 0.5s;
