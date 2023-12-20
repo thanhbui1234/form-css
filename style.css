@@ -172,7 +172,7 @@ input:checked + .slider:before {
 .statusText {
   position: relative;
   left: 69px;
-  top: -16px;
+  top: -19px;
   color: #666;
   font-family: Noto Sans;
   font-size: 16px;
