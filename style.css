@@ -171,8 +171,14 @@ input:checked + .slider:before {
 }
 .statusText {
   position: relative;
-  left: 80px;
-  top: -10px;
+  left: 69px;
+  top: -16px;
+  color: #666;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
 }
 #errName,
 #errPassword {
