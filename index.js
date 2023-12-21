@@ -1,64 +1,87 @@
-(function () {
-  const customSelect = document.querySelector(".custom-select");
-  const selectBtn = document.querySelector(".select-button");
-  const selectedValue = document.querySelector(".selected-value");
-  const optionsList = document.querySelectorAll(".select-dropdown li");
+// (function () {
+//   const customSelect = document.querySelector(".custom-select");
+//   const selectBtn = document.querySelector(".select-button");
+//   const selectedValue = document.querySelector(".selected-value");
+//   const optionsList = document.querySelectorAll(".select-dropdown li");
 
-  // add click event to select button
-  selectBtn.addEventListener("click", () => {
-    // add/remove active class on the container element
-    customSelect.classList.toggle("active");
-    // update the aria-expanded attribute based on the current state
-    selectBtn.setAttribute(
-      "aria-expanded",
-      selectBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
-    );
-  });
+//   // add click event to select button
+//   selectBtn.addEventListener("click", () => {
+//     // add/remove active class on the container element
+//     customSelect.classList.toggle("active");
+//     // update the aria-expanded attribute based on the current state
+//     selectBtn.setAttribute(
+//       "aria-expanded",
+//       selectBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+//     );
+//   });
 
-  optionsList.forEach((option) => {
-    function handler(e) {
-      // Click Events
-      if (e.type === "click" && e.clientX !== 0 && e.clientY !== 0) {
-        selectedValue.textContent = this.children[1].textContent;
-        customSelect.classList.remove("active");
-      }
-      // Key Events
-      if (e.key === "Enter") {
-        selectedValue.textContent = this.textContent;
-        customSelect.classList.remove("active");
-      }
-    }
+//   optionsList.forEach((option) => {
+//     function handler(e) {
+//       // Click Events
+//       if (e.type === "click" && e.clientX !== 0 && e.clientY !== 0) {
+//         selectedValue.textContent = this.children[1].textContent;
+//         customSelect.classList.remove("active");
+//       }
+//       // Key Events
+//       if (e.key === "Enter") {
+//         selectedValue.textContent = this.textContent;
+//         customSelect.classList.remove("active");
+//       }
+//     }
 
-    option.addEventListener("keyup", handler);
-    option.addEventListener("click", handler);
-  });
-})();
+//     option.addEventListener("keyup", handler);
+//     option.addEventListener("click", handler);
+//   });
+// })();
 
 /////////////////////////////////////////////////////
 const dropbtn = document.querySelector(".dropdown");
 const iconSelect = document.querySelector(".icon-select");
 const dropdownContent = document.querySelector(".dropdown-content");
 dropbtn.addEventListener("click", () => {
-  dropdownContent.classList.toggle("active");
+  // dropdownContent.classList.toggle("active");
   iconSelect.classList.toggle("icon-select-active");
 });
-function handleClick() {
-  console.log("hi");
-  dropdownContent.classList.remove("active-show");
-}
-const selectopt = document.querySelector("input[name=dropdownOption]");
-selectopt.addEventListener("click", () => {
-  dropdownContent.classList.remove("active");
+
+//////////////////////////////////////////////////////////////////////////////////////
+// function handleClick() {
+//   // dropdownContent.style.display = "block";
+// }/
+// // const selectopt = document.querySelector("input[name=dropdownOption]");
+// // selectopt.addEventListener("click", () => {
+// //   dropdownContent.classList.remove("active");
+// // });
+// ////////////////
+// const selectDown = document.querySelector("[role='listbox']");
+const optionsClick = document.querySelectorAll('[role="option"]');
+optionsClick.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    const value = el.querySelector("input").value;
+    const selectedValue = document.querySelector(".selected-value");
+    selectedValue.innerHTML = value;
+    dropdownContent?.classList?.remove("active");
+  });
 });
-////////////////
-const selectDown = document.querySelector("[role='listbox']");
-const optionsClick = document.querySelector('[role="option"]');
 
-const onRemoveSelectOption = () => {
-  dropdownContent.classList.add("active-show");
+// const onRemoveSelectOption = () => {
+//   dropdownContent.style.display = "none";
+// };
+//////////////////////////////////////////////////////////////////////////////////////
+
+////////////////
+const handleDrop = () => {
+  dropdownContent?.classList?.toggle("active");
 };
+const selectDown = document.querySelector(".select-dropdown");
+document.addEventListener("click", function handleClickOutsideBox(e) {
+  if (dropbtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+    dropdownContent?.classList?.add("active");
+  } else {
+    dropdownContent?.classList?.remove("active");
+  }
+});
 
-////////////////
+//////////////
 const statusInput = document.querySelector("#status");
 const containerRadio = document.querySelector(".container-radio");
 const textStatus = document.querySelector(".statusText");
@@ -75,6 +98,7 @@ const getChecked = () => {
       }
     }
     containerRadio.classList.remove("active-radio");
+    // containerRadio.style.display = "none";
     textStatus.innerHTML = "OFF";
   }
 };
@@ -107,7 +131,6 @@ const removeErrPassword = (e) => {
 
 ////////////////////////////////////
 const formm = document.querySelector("form");
-
 formm.addEventListener("submit", (e) => {
   let valueSelecOption;
   const selectopt = document.querySelectorAll("input[name=dropdownOption]");
@@ -130,7 +153,8 @@ formm.addEventListener("submit", (e) => {
       valueInputSelected = optionSelect[i].value;
     }
   }
-
+  const status = document.querySelector("#status");
+  const remember = document.querySelector("#remember");
   const username = document.querySelector("#name");
   const password = document.querySelector("#password");
   const errName = document.querySelector("#errName");
@@ -160,6 +184,8 @@ formm.addEventListener("submit", (e) => {
   const inputValues = {
     username: username.value,
     password: password.value,
+    remember: remember.checked,
+    setStatus: status.checked,
     radio: valueInputName,
     dropdownOptipn: valueSelecOption,
   };
@@ -177,6 +203,8 @@ const cancle = document
     const errName = document.querySelector("#errName");
     const errPassword = document.querySelector("#errPassword");
     const iconErrPw = document.querySelector(".icon-err-password");
+    const remember = document.querySelector("#remember");
+    remember.checked = false;
     username.classList.remove("invalid");
     errName.innerHTML = "";
     password.classList.remove("invalid");

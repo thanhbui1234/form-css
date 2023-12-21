@@ -40,7 +40,8 @@ body {
 *input {
   border: 1px solid #f1efef;
 }
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   margin-top: 10px;
   border: 2px solid #f1efef;
   padding: 10px;
@@ -49,7 +50,8 @@ input[type="text"] {
   height: 32px;
   color: gray;
 }
-input[type="text"] ~ label {
+input[type="text"] ~ label,
+input[type="password"] ~ label {
   color: #666;
   font-family: Noto Sans;
   font-size: 12px;
@@ -58,7 +60,9 @@ input[type="text"] ~ label {
   line-height: 18px; /* 150% */
 }
 input[type="text"]:hover,
-input[type="text"]:focus {
+input[type="password"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus {
   border-color: #7a5cfa;
   outline: none;
 }
