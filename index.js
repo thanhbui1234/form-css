@@ -1,39 +1,3 @@
-// (function () {
-//   const customSelect = document.querySelector(".custom-select");
-//   const selectBtn = document.querySelector(".select-button");
-//   const selectedValue = document.querySelector(".selected-value");
-//   const optionsList = document.querySelectorAll(".select-dropdown li");
-
-//   // add click event to select button
-//   selectBtn.addEventListener("click", () => {
-//     // add/remove active class on the container element
-//     customSelect.classList.toggle("active");
-//     // update the aria-expanded attribute based on the current state
-//     selectBtn.setAttribute(
-//       "aria-expanded",
-//       selectBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
-//     );
-//   });
-
-//   optionsList.forEach((option) => {
-//     function handler(e) {
-//       // Click Events
-//       if (e.type === "click" && e.clientX !== 0 && e.clientY !== 0) {
-//         selectedValue.textContent = this.children[1].textContent;
-//         customSelect.classList.remove("active");
-//       }
-//       // Key Events
-//       if (e.key === "Enter") {
-//         selectedValue.textContent = this.textContent;
-//         customSelect.classList.remove("active");
-//       }
-//     }
-
-//     option.addEventListener("keyup", handler);
-//     option.addEventListener("click", handler);
-//   });
-// })();
-
 /////////////////////////////////////////////////////
 const dropbtn = document.querySelector(".dropdown");
 const iconSelect = document.querySelector(".icon-select");
@@ -43,16 +7,6 @@ dropbtn.addEventListener("click", () => {
   iconSelect.classList.toggle("icon-select-active");
 });
 
-//////////////////////////////////////////////////////////////////////////////////////
-// function handleClick() {
-//   // dropdownContent.style.display = "block";
-// }/
-// // const selectopt = document.querySelector("input[name=dropdownOption]");
-// // selectopt.addEventListener("click", () => {
-// //   dropdownContent.classList.remove("active");
-// // });
-// ////////////////
-// const selectDown = document.querySelector("[role='listbox']");
 const optionsClick = document.querySelectorAll('[role="option"]');
 optionsClick.forEach((el) => {
   el.addEventListener("click", (e) => {
@@ -63,12 +17,6 @@ optionsClick.forEach((el) => {
   });
 });
 
-// const onRemoveSelectOption = () => {
-//   dropdownContent.style.display = "none";
-// };
-//////////////////////////////////////////////////////////////////////////////////////
-
-////////////////
 const handleDrop = () => {
   dropdownContent?.classList?.toggle("active");
 };
